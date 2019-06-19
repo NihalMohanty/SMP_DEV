@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello WILL!!!</title>
+
+    <script type="text/javascript" src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js">
+    </script>
+    <script type="text/javascript">
+        bbcRequireMap = {
+            "bump-4": "https://emp.bbci.co.uk/emp/bump-4/bump-4"
+        }
+        require({
+            paths: bbcRequireMap,
+            waitSeconds: 30
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1 style="text-align: center">Hello World!!</h1>
+
+    <div id="mediaPlayer" style="height:270px;width:480px; align-self: center;"></div>
+        <script type="text/javascript">
+            require(['bump-4'],function (bump) {
+                var settings = {
+                    product: 'news',
+                    responsive: true,
+                    counterName: 'smp.demopage.player.page',
+                    playlistObject: {
+                             "title": "Michael Gove: Cocaine use \"was a crime and a mistake\"",
+                             "holdingImageURL":"https://ichef.bbci.co.uk/images/ic/976x549/p07cnwyg.jpg",
+                             "items": [
+                                     {
+                             "versionID": "p07cnws3",
+                                 "kind": "programme",
+                            //  "duration":37
+                                }]
+                    },
+                    statsObject: { clipPID: "p07cnws3" }
+                }
+                var mediaPlayer = bump.player(document.getElementById('mediaPlayer'),settings);
+                mediaPlayer.load();
+            });
+        </script>
+
+</body>
+
+</html>
