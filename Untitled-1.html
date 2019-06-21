@@ -22,37 +22,41 @@
     </script>
 
 </head>
+<br>
+
 
 <body>
     <h1 style="text-align: center">Hello World!!</h1>
 
-    <div id="mediaPlayer" style="height:270px;width:480px;
-    "></div>
-    <script type="text/javascript">
-        require(['bump-4'], function (bump) {
-            var settings = {
-                product: 'news',
-                responsive: true,
-                counterName: 'smp.demopage.player.page',
-                ui: {
-                    colour: "#008000"
-                },
-                playlistObject: {
-                    "title": "Michael Gove: Cocaine use \"was a crime and a mistake\"",
-                    "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/976x549/p07cnwyg.jpg",
-                    "items": [
-                        {
-                            "versionID": "p07cnws3",
-                            "kind": "programme",
-                        }]
-                },
-                // statsObject: { clipPID: "p07cnws3" }
-            }
-            var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), settings);
-            mediaPlayer.load();
-        });
-    </script>
-<br>
+    <div id="mediaPlayer" style="height:270px;width:480px;">
+        <script type="text/javascript">
+            require(['bump-4'], function (bump) {
+                var settings = {
+                    product: 'news',
+                    responsive: true,
+                    counterName: 'smp.demopage.player.page',
+                    ui: {
+                        colour: "#008000"
+                    },
+                    playlistObject: {
+                        "title": "Michael Gove: Cocaine use \"was a crime and a mistake\"",
+                        "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/976x549/p07cnwyg.jpg",
+                        "items": [
+                            {
+                                "versionID": "p07cnws3",
+                                "kind": "programme",
+                            }]
+                    },
+                    // statsObject: { clipPID: "p07cnws3" }
+                }
+                var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), settings);
+                mediaPlayer.load();
+            });
+        </script>
+    </div>
+
+
+    <br>
 
     <div id="mediaPlayer1" style="height:270px;width:480px; background-color: white"></div>
     <script type="text/javascript">
@@ -62,7 +66,7 @@
                 responsive: true,
                 counterName: 'smp.demopage.player.page',
                 ui: {
-                    colour: "#008000"
+                    colour: "#F4FA58"
                 },
                 playlistObject: {
                     "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/976x549/p07dls1c.jpg",
@@ -76,7 +80,65 @@
                 },
                 // statsObject: { clipPID: "p07cnws3" }
             }
-            var mediaPlayer = bump.player(document.getElementById('mediaPlayer'), settings);
+            var mediaPlayer = bump.player(document.getElementById('mediaPlayer1'), settings);
+            mediaPlayer.load();
+        });
+    </script>
+    <br>
+
+    <div id="mediaPlayer2" style="height:270px;width:480px; background-color: white"></div>
+    <script type="text/javascript">
+        require(['bump-4'], function (bump) {
+            var settings = {
+                product: 'news',
+                responsive: true,
+                counterName: 'smp.demopage.player.page',
+                ui: {
+                    colour: "#424242"
+                },
+                playlistObject: {
+                    "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/976x549/p07crr5w.jpg",
+                    "title": "Why does the Strait of Hormuz matter?",
+                    "guidance": null,
+                    "items": [
+                        {
+                            "versionID": "p07cr80x",
+                            "kind": "programme"
+                        }
+                    ]
+                },
+                // statsObject: { clipPID: "p07cnws3" }
+            }
+            var mediaPlayer = bump.player(document.getElementById('mediaPlayer2'), settings);
+            mediaPlayer.load();
+        });
+    </script>
+    <br>
+
+    <div id="mediaPlayer3" style="height:270px;width:480px; background-color: white"></div>
+    <script type="text/javascript">
+        require(['bump-4'], function (bump) {
+            var settings = {
+                product: 'news',
+                responsive: true,
+                counterName: 'smp.demopage.player.page',
+                ui: {
+                    colour: "#FE2E2E"
+                },
+                playlistObject: {
+                    "holdingImageURL": "https://ichef.bbci.co.uk/images/ic/976x549/p076s9rw.jpg",
+                    "title": "Past moves to police pornography in the UK",
+                    "guidance": null,
+                    "items": [
+                        {
+                            "versionID": "p076s9m5",
+                            "kind": "programme"
+                        }
+                    ]
+                },
+                // statsObject: { clipPID: "p07cnws3" }
+            }
+            var mediaPlayer = bump.player(document.getElementById('mediaPlayer3'), settings);
             mediaPlayer.load();
         });
     </script>
